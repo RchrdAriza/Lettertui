@@ -2,12 +2,7 @@ Screen {
   background: transparent;
 }
 
-PortadaImagen {
-    width: 1fr;
-    height: 1fr;
-}
-
-PortadaImagen ImageViewer {
+Poster {
     width: 1fr;
     height: 1fr;
 }
@@ -36,14 +31,4 @@ Grid {
   grid-columns: 1.3fr 2fr;
   grid-rows: 1.5fr 1fr;
   height: 100%;
-}
-
-Portada PortadaImagen {
-    width: 1fr;
-    height: 1fr;
-}
-
-Portada PortadaImagen ImageViewer {
-    width: 1fr;
-    height: 1fr;
 }
