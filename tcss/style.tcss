@@ -26,9 +26,26 @@ Metadata {
   column-span: 2;
 }
 
+Pestanas {
+  height: 1fr;
+}
+
+TabbedContent {
+  height: 1fr;
+}
+
+TabbedContent ContentSwitcher {
+  height: 1fr;
+}
+
+TabPane {
+  height: 1fr;
+  padding: 0;
+}
+
 Grid {
   grid-size: 2 2;
   grid-columns: 1.3fr 2fr;
   grid-rows: 1.5fr 1fr;
-  height: 100%;
+  height: 1fr;
 }

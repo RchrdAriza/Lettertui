@@ -4,7 +4,7 @@ from io import BytesIO
 from textual.app import App, ComposeResult
 from textual.widget import Widget
 from textual.containers import Grid
-from textual.widgets import Header, Footer, Static
+from textual.widgets import Header, Footer, Label, Static, TabPane, TabbedContent
 from textual.containers import Center
 from API.tmdb import search_movies
 from textual_image.widget import Image as textual_image
@@ -52,6 +52,21 @@ class Metadata(Static):
         yield Static("Metadata")
 
 
+class Pestanas(Widget):
+    def compose(self) -> ComposeResult:
+        with TabbedContent(initial="pestana_inicio"):
+
+            with TabPane("Inicio", id="pestana_inicio"):
+                with Grid():
+                    yield Portada()
+                    yield Info()
+                    yield Metadata()
+            with TabPane("Configuración", id="pestana_config"):
+                yield Label("Panel de Configuración")
+                yield Label("Opción 1: [ ] Activar algo")
+                yield Label("Opción 2: [ ] Otra opción")
+
+
 class Lettertui(App):
 
     CSS_PATH = "tcss/style.tcss"
@@ -63,10 +78,7 @@ class Lettertui(App):
 
     def compose(self) -> ComposeResult:
         yield Header()
-        with Grid():
-            yield Portada()
-            yield Info()
-            yield Metadata()
+        yield Pestanas()
         yield Footer()
 
     def action_toggle_dark(self) -> None:
