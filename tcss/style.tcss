@@ -1,0 +1,49 @@
+Screen {
+  background: transparent;
+}
+
+PortadaImagen {
+    width: 1fr;
+    height: 1fr;
+}
+
+PortadaImagen ImageViewer {
+    width: 1fr;
+    height: 1fr;
+}
+
+Portada {
+  border: round $primary;
+  height: 100%;
+  border-subtitle-align: left;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+Info {
+  border: round $primary;
+  height: 100%;
+  border-subtitle-align: left;
+}
+
+Metadata {
+  border: double $primary;
+  height: 100%;
+  column-span: 2;
+}
+
+Grid {
+  grid-size: 2 2;
+  grid-columns: 1.3fr 2fr;
+  grid-rows: 1.5fr 1fr;
+  height: 100%;
+}
+
+Portada PortadaImagen {
+    width: 1fr;
+    height: 1fr;
+}
+
+Portada PortadaImagen ImageViewer {
+    width: 1fr;
+    height: 1fr;
+}
