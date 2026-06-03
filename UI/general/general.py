@@ -7,7 +7,7 @@ from API.tmdb import search_movies
 from textual.app import ComposeResult
 from textual.widget import Widget
 
-data = search_movies("superman")
+data = search_movies("el viaje de chihiro")
 pelicula = data["results"][0]
 poster_path = pelicula["poster_path"]
 

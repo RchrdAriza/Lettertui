@@ -31,8 +31,6 @@ def search_movies(query: str, page: int = 1, language: str = "es-CO"):
 if __name__ == "__main__":
     data = search_movies("Inception")
     resultado = data["results"][0]
-# print(f"Total resultados: {data['results'][0]}")
-# print(f"Total páginas: {data['total_pages']}")
     print(resultado["title"])
     print(resultado["poster_path"])
     print(resultado["release_date"])
